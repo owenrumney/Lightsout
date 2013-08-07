@@ -1,0 +1,42 @@
+!!! 5
+head
+    meta(charset='utf-8')
+    title Lights Out!
+    meta(name='description', content='Lights out game - put out all the lights')
+    link(href="stylesheets/styles.css", rel='stylesheet')
+    link(href="stylesheets/jquery-ui-1.9.2.custom.css", rel='stylesheet')
+    link(href="stylesheets/bootstrap-cosmo.css", rel='stylesheet')
+    script(type='text/javascript', src='js/jquery-latest.js')
+    script(type='text/javascript', src='js/jquery-ui.js')
+body
+  script(type='text/javascript')  
+    $(function() {
+    $( "#datepicker" ).datepicker();
+    });
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        .nav
+            a.brand(href='/')
+              img(src='images/main.png')
+  .container
+    br
+    header.jumbotron.subhead.paddedTop
+      .row
+        br
+        .span3
+          br
+          block sidebar-left
+        .span6
+          br
+          block content
+        .span3
+          br
+          block sidebar-right
+  script(type='text/javascript', src='js/lightsout.js')
+    script(type='text/javascript')
+    (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();  

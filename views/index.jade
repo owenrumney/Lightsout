@@ -1,0 +1,35 @@
+extend layout
+block content
+	input( type='hidden', value='#{size}', id='sizeValue')
+	input( type='hidden', value='#{difficulty}', id='difficultyValue')
+	div#playArea
+	div#messages.messages
+block sidebar-left
+	h1	How to play
+	br
+	p	The aim of the game is to extinguish all of the lights in the playing area
+		br
+		br
+		| When you click on a light, it will toggle on or off. Each of the horizonal or vertical adjacent lights will also toggle.
+		br
+		br
+		| Use the difficulty setting to make the game easier or harder.
+block sidebar-right
+	form.pull-left( id='form1', action='/', method='POST')
+		fieldset
+			legend.pull-right Game Settings
+			div.control-group
+				label.control-label Cell Size
+				div.controls
+					select( id='cellSize', name='cellSize')
+						option 3
+						option 5
+						option 7
+						option 9
+						option 11
+						option 13
+			div.form-actions.pull-right
+				input( type='submit', class='btn btn-inverse', value='New Game')
+				input( type='button', class='btn btn-inverse', value='Restart')
+				
+
